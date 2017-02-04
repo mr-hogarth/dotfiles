@@ -1,0 +1,81 @@
+URxvt.font:                xft:xos4 Terminess Powerline:pixelsize=18,xft:Hack:pixelsize=18
+URxvt.boldFont:            xft:xos4 Terminess Powerline:pixelsize=18:bold
+URxvt.italicFont:          xft:xos4 Terminess Powerline:pixelsize=18:italic
+URxvt.boldItalicFont:      xft:xos4 Terminess Powerline:pixelsize=18:bold:italic
+URxvt.letterSpace:         -0
+
+URxvt.transparent: 	    true
+URxvt.shading: 		    50
+
+
+! special
+*.foreground:   #93a1a1
+*.background:   #002b36
+*.cursorColor:  #93a1a1
+
+! black
+*.color0:       #002b36
+*.color8:       #657b83
+
+! red
+*.color1:       #dc322f
+*.color9:       #dc322f
+
+! green
+*.color2:       #859900
+*.color10:      #859900
+
+! ! yellow
+*.color3:       #b58900
+*.color11:      #b58900
+
+! blue
+*.color4:       #268bd2
+*.color12:      #268bd2
+
+! magenta
+*.color5:       #6c71c4
+*.color13:      #6c71c4
+!
+
+ URxvt.internalBorder:      0
+ URxvt.externalBorder:      0
+!
+ URxvt.scrollBar:           false
+!
+ URxvt*fading:              30
+!
+! URxvt.perl-ext-common:     matcher,resize-font,foo
+!
+ URxvt.keysym.F11:          perl:fullscreen:switch
+!
+ URxvt.resize-font.smaller: C-Down
+ URxvt.resize-font.bigger:  C-Up
+!
+ URxvt.url-launcher:        /usr/bin/firefox
+ URxvt.keysym.M-Delete:     perl:matcher:list
+ URxvt.colorUL:             #7780a1
+!
+
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+ rofi.color-enabled:    true
+ rofi.color-window:     #BF002B36, argb:0082828, argb:0081818
+ rofi.color-normal:     argb:0000000, #93a1a1, argb:0082828, argb:00cafc2, #859900
+ rofi.color-active:     argb:0082828, #f8f8f8, argb:0082828, argb:00cafc2, #acdff2
+ rofi.color-urgent:     argb:0082828, #dc322f, argb:0082828, argb:0dc322f, #ff5552
+ rofi.lines:             3
+ rofi.fullscreen:        false
+ rofi.font:              xos4 Terminess Powerline 18
+ rofi.separator-style:   solid
+ rofi.bw:                0
+ rofi.eh:                 2
+ rofi.line-margin:       10
+ rofi.hide-scrollbar:    true
+ rofi.width:             100
+ rofi.height:            100
+ rofi.padding:           1000
+ rofi.fake-transparency: true
+ rofi.eh: 1

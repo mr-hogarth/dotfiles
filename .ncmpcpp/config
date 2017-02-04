@@ -1,0 +1,60 @@
+#
+# ~/.ncmpcpp/config
+#
+
+# connection settings
+mpd_host = "localhost"
+mpd_port = "6600"
+mpd_music_dir = "/home/hogarth/Music"
+mpd_crossfade_time = "5"
+
+# Visualizer
+visualizer_in_stereo = "yes"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_sync_interval = "30"
+#visualizer_type = "ellipse"
+visualizer_type = "spectrum" (spectrum/wave)
+visualizer_look = "+|"
+#visualizer_look = "●▮"
+
+# Playlist
+song_columns_list_format = "(4f)[magenta]{n} (25)[green]{a} (30)[default]{b} (40)[default]{t|f} (6f)[white]{l}"
+now_playing_prefix = "$b→ "
+now_playing_suffix = "$/b"
+playlist_display_mode = "columns" (classic/columns)
+autocenter_mode = "yes"
+centered_cursor = "yes"
+
+# Bars
+#song_status_format = "$0%t $8• $7%a $8•{ $5%b $8• }$5%y$0"
+#progressbar_look = "-> "
+progressbar_look = "─╼─"
+#progressbar_look = "░█ "
+titles_visibility = "no"
+header_visibility = "no"
+statusbar_visibility = "no"
+
+# Browser
+browser_playlist_prefix = "82plist »$9 "
+browser_display_mode = "columns" (classic/columns)
+
+# Colors
+colors_enabled = "yes"
+discard_colors_if_item_is_selected = "no"
+header_window_color = "default"
+volume_color = green
+#state_line_color = "blue"
+#state_flags_color = "blue"
+main_window_color = "default"
+main_window_highlight_color = cyan
+progressbar_color = black
+progressbar_elapsed_color = green
+color1 = magenta
+color2 = red
+statusbar_color = red
+active_column_color = green
+
+# Others
+song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
+search_engine_display_mode = "columns" (classic/columns)
+follow_now_playing_lyrics = "yes"

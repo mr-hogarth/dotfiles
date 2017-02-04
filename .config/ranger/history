@@ -1,0 +1,21 @@
+search .tm
+search pol
+open_with 
+search poly
+search xre
+search i3
+search tessa
+rename Silver String Bikini 1.mp4
+shell unzip Air-for-Steam-2017-0116.zip 
+
+shell mkdir colorschemes
+shell vim rawine.py
+shell vim options.py
+search rangr
+search rang
+shell mv rc.conf rc.conf.back
+shell vim rc.conf
+delete
+rename rc.conf
+search 
+search ranger
