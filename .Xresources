@@ -4,13 +4,14 @@ URxvt.italicFont:          xft:xos4 Terminess Powerline:pixelsize=18:italic
 URxvt.boldItalicFont:      xft:xos4 Terminess Powerline:pixelsize=18:bold:italic
 URxvt.letterSpace:         -0
 
-URxvt.transparent: 	    true
-URxvt.shading: 		    50
-
+!URxvt.transparent: 	    true
+!URxvt.shading: 		    0
 
 ! special
+URxvt.depth: 32
+URxvt.background: [75]#002b36
 *.foreground:   #93a1a1
-*.background:   #002b36
+!*.background:   #002b36
 *.cursorColor:  #93a1a1
 
 ! black
@@ -44,6 +45,7 @@ URxvt.shading: 		    50
  URxvt.scrollBar:           false
 !
  URxvt*fading:              30
+ URxvt*fadeColor: 	    #002b36
 !
 ! URxvt.perl-ext-common:     matcher,resize-font,foo
 !
@@ -78,4 +80,3 @@ URxvt.shading: 		    50
  rofi.height:            100
  rofi.padding:           1000
  rofi.fake-transparency: true
- rofi.eh: 1
