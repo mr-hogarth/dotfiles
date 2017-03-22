@@ -445,7 +445,7 @@ a.thumbnail img {
     border: none;
 }
 .srdrop .choice.bottom-option {
-	border-top: 1px solid #333;
+	border-top: 1px solid #586e75;
 }
 .drop-choices a.choice {
     cursor: pointer;
@@ -634,7 +634,7 @@ textarea {
 .comment .child {
     margin-top: 10px;
     margin-left: 15px;
-    border-left: 1px solid #333;
+    border-left: 1px solid #586e75;
 }
 .morecomments a {
     color: #657b83;	
@@ -937,7 +937,7 @@ ul.sr-bar:nth-child(3),
 }
 .side .md {
 	background: #002b36;
-	color: #eee8d5;
+	color: #93a1a1;
 	padding-top: 30px;
 }
 .md hr {
