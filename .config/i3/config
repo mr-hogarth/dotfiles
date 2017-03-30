@@ -7,6 +7,7 @@ font pango: xos4 Terminess Powerline 10
 #Color Scheme
 set $bg        #002b36
 set $fg        #93a1a1
+set $base      #073642
 set $grey      #839496
 set $white     #FFFFFF
 set $yellow    #b58900
@@ -40,7 +41,7 @@ set $workspace10 "10"
 assign [class="Firefox"]    $workspace1
 assign [class="Spotify"]    $workspace3
 assign [class="discord"]    $workspace3
-assign [class="sxiv"] 	    $workspace4
+assign [class="Sxiv"] 	    $workspace4
 assign [class="Steam"]	    $workspace5
 assign [class="Zathura"]    $workspace6
 assign [class="starbound"]  $workspace6
@@ -57,17 +58,18 @@ for_window [class="Seahorse"] floating enable
 for_window [class="plasmawindowed"] floating enable
 for_window [class="file-roller"] floating enable
 for_window [class="wpg.py"] floating enable
-gaps inner 8 
+gaps inner 12 
 gaps outer 0 
 smart_borders on
 smart_gaps on
 
 
 # Keybindings 
-bindsym $mod+Return exec urxvt 
+bindsym $mod+Return exec urxvt
 bindsym $mod+Ctrl+Return exec termite
 bindsym $mod+Shift+Return exec thunar 
 bindsym $mod+Shift+f exec firefox
+bindsym $mod+Ctrl+f exec tor-browser-en
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+d exec rofi -show ssh -font "xos4 Terminess Powerline 18" -lines 3 -eh 2 -width 100 -padding 475 -opacity "75" -bw 0
 bindsym $mod+Tab exec rofi -show window -lines 10 -location 2 -xoffset 0
@@ -131,16 +133,16 @@ bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 bindsym XF86AudioMute  exec pactl set-sink-mute 0 toggle 
 bindsym $mod+r mode "resize"
 mode "resize" {
-		bindsym j resize shrink width 10 px or 10 ppt
-		bindsym k resize grow height 10 px or 10 ppt
-		bindsym l resize shrink height 10 px or 10 ppt
-		bindsym semicolon resize grow width 10 px or 10 ppt
-		bindsym Left resize shrink width 10 px or 10 ppt
-		bindsym Down resize grow height 10 px or 10 ppt
-		bindsym Up resize shrink height 10 px or 10 ppt
-		bindsym Right resize grow width 10 px or 10 ppt
-		bindsym Return mode "default"
-		bindsym Escape mode "default"
+	bindsym j resize shrink width 10 px or 10 ppt
+	bindsym k resize grow height 10 px or 10 ppt
+	bindsym l resize shrink height 10 px or 10 ppt
+	bindsym semicolon resize grow width 10 px or 10 ppt
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 
 #Gaps Modification
@@ -149,44 +151,49 @@ set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
 bindsym $mod+Shift+g mode "$mode_gaps"
 mode "$mode_gaps" {
-		bindsym o      mode "$mode_gaps_outer"
-		bindsym i      mode "$mode_gaps_inner"
-		bindsym Return mode "default"
-		bindsym Escape mode "default"
+	bindsym o      mode "$mode_gaps_outer"
+	bindsym i      mode "$mode_gaps_inner"
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 mode "$mode_gaps_inner" {
-		bindsym plus  gaps inner current plus 5
-		bindsym minus gaps inner current minus 5
-		bindsym 0     gaps inner current set 0
-		bindsym Shift+plus  gaps inner all plus 5
-		bindsym Shift+minus gaps inner all minus 5
-		bindsym Shift+0     gaps inner all set 0
-		bindsym Return mode "default"
-		bindsym Escape mode "default"
+	bindsym plus  gaps inner current plus 5
+	bindsym minus gaps inner current minus 5
+	bindsym 0     gaps inner current set 0
+	bindsym Shift+plus  gaps inner all plus 5
+	bindsym Shift+minus gaps inner all minus 5
+	bindsym Shift+0     gaps inner all set 0
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 mode "$mode_gaps_outer" {
-		bindsym plus  gaps outer current plus 5
-		bindsym minus gaps outer current minus 5
-		bindsym 0     gaps outer current set 0
-		bindsym Shift+plus  gaps outer all plus 5
-		bindsym Shift+minus gaps outer all minus 5
-		bindsym Shift+0     gaps outer all set 0
-		bindsym Return mode "default"
-		bindsym Escape mode "default"
+	bindsym plus  gaps outer current plus 5
+	bindsym minus gaps outer current minus 5
+	bindsym 0     gaps outer current set 0
+	bindsym Shift+plus  gaps outer all plus 5
+	bindsym Shift+minus gaps outer all minus 5
+	bindsym Shift+0     gaps outer all set 0
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
+
+# My bar
+#bar {
+#	i3bar_command ~/.i3/lemonbar/i3_lemonbar.sh
+#}
 
 # Startup 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always feh --bg-scale /home/hogarth/Dropbox/Pix/Wallpapers/9wZhbBb.png 
+exec_always feh --bg-scale /home/hogarth/Pictures/Pix/Wallpapers/Solarized/9wZhbBb.png
 exec_always compton 
 exec numlockx
 exec pulseaudio --startup
+exec xrdb ~/.Xresources
 exec mpd
 exec bitlbee -F -u localhost
-exec network-manager-applet
 #exec plasmawindowed org.kde.kdeconnect --statusnotifier
-exec dropbox
-exec deluge
 exec steam
 exec discord
-exec xrdb ~/.Xresources
+exec deluge
+exec dropbox
+exec nm-applet
